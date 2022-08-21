@@ -1,4 +1,4 @@
-#### File-sharing-Bot
+# File-sharing-Bot
 
 <p align="center">
   <a href="https://www.python.org">
@@ -30,9 +30,9 @@ I Guess This Will Be Usefull For Many People.....😇.
 
 **If you need any more modes in repo or If you find out any bugs, mention in [@codexbotzsupport ](https://www.telegram.dog/codexbotzsupport)**
 
-#### Features
+### Features
 - Fully customisable.
-- Customisable welcome messages.
+- Customisable welcome & Forcesub messages.
 - More than one Posts in One Link.
 - Can be deployed on heroku directly.
 
@@ -44,6 +44,7 @@ I Guess This Will Be Usefull For Many People.....😇.
 ##
 ### Installation
 #### Deploy on Heroku
+**BEFORE YOU DEPLOY ON HEROKU, YOU SHOULD FORK THE REPO AND CHANGE ITS NAME TO ANYTHING ELSE**<br>
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)</br>
 <a href="https://youtu.be/LCrkRTMkmzE">
   <img src="https://img.shields.io/badge/How%20to-Deploy-red?logo=youtube" width="147">
@@ -51,15 +52,17 @@ I Guess This Will Be Usefull For Many People.....😇.
 **Check This Tutorial Video on YouTube for any Help**<br>
 **Thanks to [Erich](https://t.me/ErichDaniken) and his [InFoTel](https://t.me/InFoTel_Group) for this Video**
 
+#### Deploy on Railway
+[![Deploy on Railway](https://railway.app/button.svg)](https://railway.app/new/template/1jKLr4)
+
 #### Deploy in your VPS
-```bash
+````bash
 git clone https://github.com/CodeXBotz/File-Sharing-Bot
 cd File-Sharing-Bot
 pip3 install -r requirements.txt
 # <Create config.py appropriately>
 python3 main.py
-```
-##
+````
 
 ### Admin Commands
 
@@ -70,6 +73,9 @@ python3 main.py
 
 /genlink - create link for one post
 
+/users - view bot statistics
+
+/broadcast - broadcast any messages to bot users
 ```
 
 ### Variables
@@ -80,8 +86,37 @@ python3 main.py
 * `OWNER_ID` Must enter Your Telegram Id
 * `CHANNEL_ID` Your Channel ID eg:- -100xxxxxxxx
 * `ADMINS` Optional: A space separated list of user_ids of Admins, they can only create links
-* `START_MESSAGE` Optional: start message of bot, use HTML parsemode format
+* `START_MESSAGE` Optional: start message of bot, use HTML and <a href='https://github.com/codexbotz/File-Sharing-Bot/blob/main/README.md#start_message'>fillings</a>
+* `FORCE_SUB_MESSAGE`Optional:Force sub message of bot, use HTML and Fillings
 * `FORCE_SUB_CHANNEL` Optional: ForceSub Channel ID, leave 0 if you want disable force sub
+* `PROTECT_CONTENT` Optional: True if you need to prevent files from forwarding
+
+### Extra Variables
+
+* `CUSTOM_CAPTION` put your Custom caption text if you want Setup Custom Caption, you can use HTML and <a href='https://github.com/CodeXBotz/File-Sharing-Bot/blob/main/README.md#custom_caption'>fillings</a> for formatting (only for documents)
+* `DISABLE_CHANNEL_BUTTON` Put True to Disable Channel Share Button, Default if False
+* `BOT_STATS_TEXT` put your custom text for stats command, use HTML and <a href='https://github.com/codexbotz/File-Sharing-Bot/blob/main/README.md#custom_stats'>fillings</a>
+* `USER_REPLY_TEXT` put your text to show when user sends any message, use HTML
+
+
+### Fillings
+#### START_MESSAGE | FORCE_SUB_MESSAGE
+
+* `{first}` - User first name
+* `{last}` - User last name
+* `{id}` - User ID
+* `{mention}` - Mention the user
+* `{username}` - Username
+
+#### CUSTOM_CAPTION
+
+* `{filename}` - file name of the Document
+* `{previouscaption}` - Original Caption
+
+#### CUSTOM_STATS
+
+* `{uptime}` - Bot Uptime
+
 
 ## Support   
 Join Our [Telegram Group](https://www.telegram.dog/codexbotzsupport) For Support/Assistance And Our [Channel](https://www.telegram.dog/codexbotz) For Updates.   
@@ -105,3 +140,4 @@ published by the Free Software Foundation, either version 3 of the License, or
 ##
 
    **Star this Repo if you Liked it ⭐⭐⭐**
+
