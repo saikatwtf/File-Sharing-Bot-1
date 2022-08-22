@@ -10,7 +10,7 @@ async def cb_handler(client: Bot, query: CallbackQuery):
     data = query.data
     if data == "about":
         await query.message.edit_text(
-            text = f"<b>○ Creator : <a href='tg://user?id={OWNER_ID}'>This Person</a>\n○ Language : <code>Python3</code>\n○ Channel : @MoviZenX\n○ Support Group : @MoviZenix</b>",
+            text = f"<b>○ Creator : Somebody\n○ Language</b> : <code>Python69</code>\n○ <b>Database : MongoDB</b>",
             disable_web_page_preview = True,
             reply_markup = InlineKeyboardMarkup(
                 [
